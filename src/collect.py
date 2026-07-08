@@ -46,7 +46,7 @@ def month_list(end_ym, n):
     return list(reversed(out))
 
 
-def fetch(lawd_cd, deal_ymd):
+def fetch(lawd_cd, deal_ymd, max_retries=3):
     rows, page = [], 1
     while True:
         params = {
@@ -56,7 +56,20 @@ def fetch(lawd_cd, deal_ymd):
             "pageNo": page,
             "numOfRows": 1000,
         }
-        r = requests.get(ENDPOINT, params=params, timeout=20)
+        # 재시도 로직
+        r = None
+        for attempt in range(max_retries):
+            try:
+                r = requests.get(ENDPOINT, params=params, timeout=60)
+                break
+            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+                wait = 2 ** attempt
+                print(f"  [재시도 {attempt+1}/{max_retries}] {lawd_cd}/{deal_ymd} p{page}: {e.__class__.__name__}, {wait}초 대기")
+                time.sleep(wait)
+        if r is None:
+            print(f"  [실패] {lawd_cd}/{deal_ymd} p{page} — 재시도 소진, 건너뜀")
+            break
+
         r.encoding = "utf-8"
         try:
             root = ET.fromstring(r.text)

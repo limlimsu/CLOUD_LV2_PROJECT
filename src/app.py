@@ -26,7 +26,7 @@ def get_engine():
     )
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def load_data():
     engine = get_engine()
     query = """
@@ -50,7 +50,7 @@ def load_data():
     return df
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def load_coords():
     engine = get_engine()
     query = """

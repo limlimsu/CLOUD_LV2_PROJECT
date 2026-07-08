@@ -8,11 +8,13 @@ import time
 import requests
 import pandas as pd
 import xml.etree.ElementTree as ET
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+from dotenv import load_dotenv
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(BASE, "data")
 
-from dotenv import load_dotenv
 load_dotenv(os.path.join(BASE, ".env"))
 SERVICE_KEY = os.getenv("SERVICE_KEY")
 
@@ -22,7 +24,9 @@ DISTRICTS = {
     "43113": "흥덕구",
     "43114": "청원구",
 }
-END_YM = "202506"       # 데이터가 존재하는 마지막 계약월로 조정
+# 현재 시점에서 2개월 전을 마지막 계약월로 사용
+# (국토부 API는 계약 후 30일 이내 신고 데이터라 최근 1~2개월은 불완전)
+END_YM = (datetime.now() - relativedelta(months=2)).strftime("%Y%m")
 MONTHS = 12
 OUTPUT_CSV = os.path.join(DATA, "cheongju_apt_trade.csv")
 # ====================================

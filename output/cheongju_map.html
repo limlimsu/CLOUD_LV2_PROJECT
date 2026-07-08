@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca7e8b0c0f3ea91fa84907d9fb8e87ac {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ca7e8b0c0f3ea91fa84907d9fb8e87ac" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca7e8b0c0f3ea91fa84907d9fb8e87ac = L.map(
+                "map_ca7e8b0c0f3ea91fa84907d9fb8e87ac",
+                {
+                    center: [36.64, 127.49],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_da221420f92b6a8efbb4a4f72b102832 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_da221420f92b6a8efbb4a4f72b102832.addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+            var circle_marker_8bb09feff92b04814304c5bd3a7bad72 = L.circleMarker(
+                [36.6288623975897, 127.433046117468],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.16025568065744, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_caa1ecee5163857a6aad057c66c656c4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a503e7af017cc4dd10f59f842d2a0576 = $(`<div id="html_a503e7af017cc4dd10f59f842d2a0576" style="width: 100.0%; height: 100.0%;"><b>가경동</b><br>평당가: 1339만원<br>평균 거래가: 3.21억<br>거래: 793건</div>`)[0];
+                popup_caa1ecee5163857a6aad057c66c656c4.setContent(html_a503e7af017cc4dd10f59f842d2a0576);
+            
+        
+
+        circle_marker_8bb09feff92b04814304c5bd3a7bad72.bindPopup(popup_caa1ecee5163857a6aad057c66c656c4)
+        ;
+
+        
+    
+    
+            circle_marker_8bb09feff92b04814304c5bd3a7bad72.bindTooltip(
+                `<div>
+                     가경동 1339만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a98f03c0358402267e30bb35134c926b = L.circleMarker(
+                [36.6236558673473, 127.36695034729],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.695359714832659, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_4d3d6f6f6f092271ac549513a0fddc02 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ad17366c40bbe36fc84c0ef8823f192 = $(`<div id="html_3ad17366c40bbe36fc84c0ef8823f192" style="width: 100.0%; height: 100.0%;"><b>강내면 월곡리</b><br>평당가: 1043만원<br>평균 거래가: 2.22억<br>거래: 94건</div>`)[0];
+                popup_4d3d6f6f6f092271ac549513a0fddc02.setContent(html_3ad17366c40bbe36fc84c0ef8823f192);
+            
+        
+
+        circle_marker_a98f03c0358402267e30bb35134c926b.bindPopup(popup_4d3d6f6f6f092271ac549513a0fddc02)
+        ;
+
+        
+    
+    
+            circle_marker_a98f03c0358402267e30bb35134c926b.bindTooltip(
+                `<div>
+                     강내면 월곡리 1043만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75139689bb55fc66a6da47407f4317b5 = L.circleMarker(
+                [36.6103553225166, 127.354980900855],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.099019513592784, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_c77608508a91b43b15dfc1885226d5be = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_674a1abea8e875608dc9403905af0606 = $(`<div id="html_674a1abea8e875608dc9403905af0606" style="width: 100.0%; height: 100.0%;"><b>강내면 월탄리</b><br>평당가: 424만원<br>평균 거래가: 0.58억<br>거래: 26건</div>`)[0];
+                popup_c77608508a91b43b15dfc1885226d5be.setContent(html_674a1abea8e875608dc9403905af0606);
+            
+        
+
+        circle_marker_75139689bb55fc66a6da47407f4317b5.bindPopup(popup_c77608508a91b43b15dfc1885226d5be)
+        ;
+
+        
+    
+    
+            circle_marker_75139689bb55fc66a6da47407f4317b5.bindTooltip(
+                `<div>
+                     강내면 월탄리 424만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fca4280b1951873c244b96e86d98bd21 = L.circleMarker(
+                [36.6173387253184, 127.360517279443],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.385164807134505, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_7f3e55f4592caa132ad2eba560f3beae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fb2cfaa87e6fbed8ce2f18dfe3c9beba = $(`<div id="html_fb2cfaa87e6fbed8ce2f18dfe3c9beba" style="width: 100.0%; height: 100.0%;"><b>강내면 탑연리</b><br>평당가: 751만원<br>평균 거래가: 1.99억<br>거래: 29건</div>`)[0];
+                popup_7f3e55f4592caa132ad2eba560f3beae.setContent(html_fb2cfaa87e6fbed8ce2f18dfe3c9beba);
+            
+        
+
+        circle_marker_fca4280b1951873c244b96e86d98bd21.bindPopup(popup_7f3e55f4592caa132ad2eba560f3beae)
+        ;
+
+        
+    
+    
+            circle_marker_fca4280b1951873c244b96e86d98bd21.bindTooltip(
+                `<div>
+                     강내면 탑연리 751만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58e758f06fe0f49a2ebc5928c841216f = L.circleMarker(
+                [36.5980508228584, 127.349618222421],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.744562646538029, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_4bc2b36d7f4caa161504012e4f7b7877 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b8459322c3307a8533fcf49987d03c18 = $(`<div id="html_b8459322c3307a8533fcf49987d03c18" style="width: 100.0%; height: 100.0%;"><b>강내면 황탄리</b><br>평당가: 338만원<br>평균 거래가: 0.34억<br>거래: 33건</div>`)[0];
+                popup_4bc2b36d7f4caa161504012e4f7b7877.setContent(html_b8459322c3307a8533fcf49987d03c18);
+            
+        
+
+        circle_marker_58e758f06fe0f49a2ebc5928c841216f.bindPopup(popup_4bc2b36d7f4caa161504012e4f7b7877)
+        ;
+
+        
+    
+    
+            circle_marker_58e758f06fe0f49a2ebc5928c841216f.bindTooltip(
+                `<div>
+                     강내면 황탄리 338만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88414dcc4975d07ef81ad52d4f92090f = L.circleMarker(
+                [36.6187845743435, 127.418806045484],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.66287829861518, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_1b610ffeeaec5154506edf0204bacb57 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_03a01f348021c31becab7c511fe16740 = $(`<div id="html_03a01f348021c31becab7c511fe16740" style="width: 100.0%; height: 100.0%;"><b>강서동</b><br>평당가: 1068만원<br>평균 거래가: 1.54억<br>거래: 215건</div>`)[0];
+                popup_1b610ffeeaec5154506edf0204bacb57.setContent(html_03a01f348021c31becab7c511fe16740);
+            
+        
+
+        circle_marker_88414dcc4975d07ef81ad52d4f92090f.bindPopup(popup_1b610ffeeaec5154506edf0204bacb57)
+        ;
+
+        
+    
+    
+            circle_marker_88414dcc4975d07ef81ad52d4f92090f.bindTooltip(
+                `<div>
+                     강서동 1068만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1e08351508f0c73c0fa10dbeaf1d92d = L.circleMarker(
+                [36.624743502794, 127.458763179238],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.79449471770337, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_74dfd25a964014b1b37c7730d16d0547 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9ab62c558c15fec1d5a3ccab1335a378 = $(`<div id="html_9ab62c558c15fec1d5a3ccab1335a378" style="width: 100.0%; height: 100.0%;"><b>개신동</b><br>평당가: 804만원<br>평균 거래가: 1.59억<br>거래: 475건</div>`)[0];
+                popup_74dfd25a964014b1b37c7730d16d0547.setContent(html_9ab62c558c15fec1d5a3ccab1335a378);
+            
+        
+
+        circle_marker_f1e08351508f0c73c0fa10dbeaf1d92d.bindPopup(popup_74dfd25a964014b1b37c7730d16d0547)
+        ;
+
+        
+    
+    
+            circle_marker_f1e08351508f0c73c0fa10dbeaf1d92d.bindTooltip(
+                `<div>
+                     개신동 804만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a802cab9b3bd8e8f9b9fb83f954c67c6 = L.circleMarker(
+                [36.6244437109155, 127.499262949215],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.473389188611005, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_648b8b1146e488c5dccd283565d148a5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c93080e355ae7c142bc913e9d5058c44 = $(`<div id="html_c93080e355ae7c142bc913e9d5058c44" style="width: 100.0%; height: 100.0%;"><b>금천동</b><br>평당가: 815만원<br>평균 거래가: 1.78억<br>거래: 551건</div>`)[0];
+                popup_648b8b1146e488c5dccd283565d148a5.setContent(html_c93080e355ae7c142bc913e9d5058c44);
+            
+        
+
+        circle_marker_a802cab9b3bd8e8f9b9fb83f954c67c6.bindPopup(popup_648b8b1146e488c5dccd283565d148a5)
+        ;
+
+        
+    
+    
+            circle_marker_a802cab9b3bd8e8f9b9fb83f954c67c6.bindTooltip(
+                `<div>
+                     금천동 815만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3182a6a5da0da5bde40104fa31e00e70 = L.circleMarker(
+                [36.6299192640902, 127.489638394595],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.449489742783178, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_f6a0d861562384d7cf70ec0038281323 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_94c850e78343b2fc3a50c87d1d4def53 = $(`<div id="html_94c850e78343b2fc3a50c87d1d4def53" style="width: 100.0%; height: 100.0%;"><b>남문로1가</b><br>평당가: 632만원<br>평균 거래가: 0.55억<br>거래: 6건</div>`)[0];
+                popup_f6a0d861562384d7cf70ec0038281323.setContent(html_94c850e78343b2fc3a50c87d1d4def53);
+            
+        
+
+        circle_marker_3182a6a5da0da5bde40104fa31e00e70.bindPopup(popup_f6a0d861562384d7cf70ec0038281323)
+        ;
+
+        
+    
+    
+            circle_marker_3182a6a5da0da5bde40104fa31e00e70.bindTooltip(
+                `<div>
+                     남문로1가 632만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6da4361bfcf9cdd40b031471e68cd7a = L.circleMarker(
+                [36.5945774784031, 127.460551398584],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.874007874011811, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_b9406eaf8bce01c5b9f4f226d6bbf911 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_37fa42582b7107d3866ebaf3d9667847 = $(`<div id="html_37fa42582b7107d3866ebaf3d9667847" style="width: 100.0%; height: 100.0%;"><b>남이면 가마리</b><br>평당가: 1276만원<br>평균 거래가: 3.22억<br>거래: 62건</div>`)[0];
+                popup_b9406eaf8bce01c5b9f4f226d6bbf911.setContent(html_37fa42582b7107d3866ebaf3d9667847);
+            
+        
+
+        circle_marker_f6da4361bfcf9cdd40b031471e68cd7a.bindPopup(popup_b9406eaf8bce01c5b9f4f226d6bbf911)
+        ;
+
+        
+    
+    
+            circle_marker_f6da4361bfcf9cdd40b031471e68cd7a.bindTooltip(
+                `<div>
+                     남이면 가마리 1276만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80f1d5416a77b8f2968eeeb0aec35eb4 = L.circleMarker(
+                [36.5740535817161, 127.425526997175],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.21110255092798, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_4aca15ca50492ffdeeb14e1bde51a704 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_72117563f6daac5b05266900f25f161b = $(`<div id="html_72117563f6daac5b05266900f25f161b" style="width: 100.0%; height: 100.0%;"><b>남이면 척북리</b><br>평당가: 240만원<br>평균 거래가: 0.35억<br>거래: 52건</div>`)[0];
+                popup_4aca15ca50492ffdeeb14e1bde51a704.setContent(html_72117563f6daac5b05266900f25f161b);
+            
+        
+
+        circle_marker_80f1d5416a77b8f2968eeeb0aec35eb4.bindPopup(popup_4aca15ca50492ffdeeb14e1bde51a704)
+        ;
+
+        
+    
+    
+            circle_marker_80f1d5416a77b8f2968eeeb0aec35eb4.bindTooltip(
+                `<div>
+                     남이면 척북리 240만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9decdca7adf0ab7917016fd6d15c1be7 = L.circleMarker(
+                [36.586721163391, 127.511436626869],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_cfca5faafecd5db6a41b7140b60c4e8b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_23b793792b02240e46615f0b910f006d = $(`<div id="html_23b793792b02240e46615f0b910f006d" style="width: 100.0%; height: 100.0%;"><b>남일면 효촌리</b><br>평당가: 605만원<br>평균 거래가: 1.55억<br>거래: 1건</div>`)[0];
+                popup_cfca5faafecd5db6a41b7140b60c4e8b.setContent(html_23b793792b02240e46615f0b910f006d);
+            
+        
+
+        circle_marker_9decdca7adf0ab7917016fd6d15c1be7.bindPopup(popup_cfca5faafecd5db6a41b7140b60c4e8b)
+        ;
+
+        
+    
+    
+            circle_marker_9decdca7adf0ab7917016fd6d15c1be7.bindTooltip(
+                `<div>
+                     남일면 효촌리 605만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e6c582fce794d3790dbfd75b9b01a37e = L.circleMarker(
+                [36.6576793886817, 127.4944355377],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.806248474865697, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_5082fee99baf7d4f8da8410d907e8537 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4a47be0dfb5ee0a549b54b162938de94 = $(`<div id="html_4a47be0dfb5ee0a549b54b162938de94" style="width: 100.0%; height: 100.0%;"><b>내덕동</b><br>평당가: 836만원<br>평균 거래가: 1.92억<br>거래: 164건</div>`)[0];
+                popup_5082fee99baf7d4f8da8410d907e8537.setContent(html_4a47be0dfb5ee0a549b54b162938de94);
+            
+        
+
+        circle_marker_e6c582fce794d3790dbfd75b9b01a37e.bindPopup(popup_5082fee99baf7d4f8da8410d907e8537)
+        ;
+
+        
+    
+    
+            circle_marker_e6c582fce794d3790dbfd75b9b01a37e.bindTooltip(
+                `<div>
+                     내덕동 836만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d2dcf9579508a579cfddd8b95951b7f = L.circleMarker(
+                [36.7250373501447, 127.529385349024],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.717797887081348, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_50a3e839d96d1f7614d9a1acad49d042 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d0fe6661bb8a2141890a95793c1087f5 = $(`<div id="html_d0fe6661bb8a2141890a95793c1087f5" style="width: 100.0%; height: 100.0%;"><b>내수읍 내수리</b><br>평당가: 385만원<br>평균 거래가: 0.68억<br>거래: 76건</div>`)[0];
+                popup_50a3e839d96d1f7614d9a1acad49d042.setContent(html_d0fe6661bb8a2141890a95793c1087f5);
+            
+        
+
+        circle_marker_8d2dcf9579508a579cfddd8b95951b7f.bindPopup(popup_50a3e839d96d1f7614d9a1acad49d042)
+        ;
+
+        
+    
+    
+            circle_marker_8d2dcf9579508a579cfddd8b95951b7f.bindTooltip(
+                `<div>
+                     내수읍 내수리 385만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba535be654b2d642ca34bed4bc7e2e8c = L.circleMarker(
+                [36.7087628553826, 127.543070942158],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.483314773547882, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_8ebb509e97aa501bacbb9e303ee5d2a8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c35de4f18ec6b8ad9127fb5124823757 = $(`<div id="html_c35de4f18ec6b8ad9127fb5124823757" style="width: 100.0%; height: 100.0%;"><b>내수읍 도원리</b><br>평당가: 330만원<br>평균 거래가: 0.58억<br>거래: 56건</div>`)[0];
+                popup_8ebb509e97aa501bacbb9e303ee5d2a8.setContent(html_c35de4f18ec6b8ad9127fb5124823757);
+            
+        
+
+        circle_marker_ba535be654b2d642ca34bed4bc7e2e8c.bindPopup(popup_8ebb509e97aa501bacbb9e303ee5d2a8)
+        ;
+
+        
+    
+    
+            circle_marker_ba535be654b2d642ca34bed4bc7e2e8c.bindTooltip(
+                `<div>
+                     내수읍 도원리 330만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1d6ca5e28181cc885205a296d56491d = L.circleMarker(
+                [36.7199992468389, 127.536425022362],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.14142842854285, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_57a0dab990f39416bd8a25aec2d6633f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4eb07eb5acc05e2adb55985c1e97579a = $(`<div id="html_4eb07eb5acc05e2adb55985c1e97579a" style="width: 100.0%; height: 100.0%;"><b>내수읍 마산리</b><br>평당가: 301만원<br>평균 거래가: 0.51억<br>거래: 51건</div>`)[0];
+                popup_57a0dab990f39416bd8a25aec2d6633f.setContent(html_4eb07eb5acc05e2adb55985c1e97579a);
+            
+        
+
+        circle_marker_c1d6ca5e28181cc885205a296d56491d.bindPopup(popup_57a0dab990f39416bd8a25aec2d6633f)
+        ;
+
+        
+    
+    
+            circle_marker_c1d6ca5e28181cc885205a296d56491d.bindTooltip(
+                `<div>
+                     내수읍 마산리 301만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4692628ce3d2e80bcec24e9178d7b257 = L.circleMarker(
+                [36.7119574824603, 127.597040045131],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.23606797749979, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_08c85235bc3c87a52ee22437f89b3398 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5d71e226973438bcccc23d17a33e1071 = $(`<div id="html_5d71e226973438bcccc23d17a33e1071" style="width: 100.0%; height: 100.0%;"><b>내수읍 우산리</b><br>평당가: 273만원<br>평균 거래가: 0.49억<br>거래: 5건</div>`)[0];
+                popup_08c85235bc3c87a52ee22437f89b3398.setContent(html_5d71e226973438bcccc23d17a33e1071);
+            
+        
+
+        circle_marker_4692628ce3d2e80bcec24e9178d7b257.bindPopup(popup_08c85235bc3c87a52ee22437f89b3398)
+        ;
+
+        
+    
+    
+            circle_marker_4692628ce3d2e80bcec24e9178d7b257.bindTooltip(
+                `<div>
+                     내수읍 우산리 273만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_522f9af3bb9008dbbbc0185a61bdfc88 = L.circleMarker(
+                [36.7052076713427, 127.532159045808],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.341664064126334, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_ae5f59b4ba78e8af0e829e98343046d0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_79e291a52bd13c0b2339adc0c9c48d69 = $(`<div id="html_79e291a52bd13c0b2339adc0c9c48d69" style="width: 100.0%; height: 100.0%;"><b>내수읍 은곡리</b><br>평당가: 320만원<br>평균 거래가: 0.44억<br>거래: 178건</div>`)[0];
+                popup_ae5f59b4ba78e8af0e829e98343046d0.setContent(html_79e291a52bd13c0b2339adc0c9c48d69);
+            
+        
+
+        circle_marker_522f9af3bb9008dbbbc0185a61bdfc88.bindPopup(popup_ae5f59b4ba78e8af0e829e98343046d0)
+        ;
+
+        
+    
+    
+            circle_marker_522f9af3bb9008dbbbc0185a61bdfc88.bindTooltip(
+                `<div>
+                     내수읍 은곡리 320만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cde95dcb8857cb7a8b97978172948ba = L.circleMarker(
+                [36.6343826164068, 127.49723844412],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.582575694955839, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_0b62671d00bd4051b638f089937a8204 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4ba7dc1c92bbcf65bf707dfda243334a = $(`<div id="html_4ba7dc1c92bbcf65bf707dfda243334a" style="width: 100.0%; height: 100.0%;"><b>대성동</b><br>평당가: 555만원<br>평균 거래가: 1.65억<br>거래: 21건</div>`)[0];
+                popup_0b62671d00bd4051b638f089937a8204.setContent(html_4ba7dc1c92bbcf65bf707dfda243334a);
+            
+        
+
+        circle_marker_1cde95dcb8857cb7a8b97978172948ba.bindPopup(popup_0b62671d00bd4051b638f089937a8204)
+        ;
+
+        
+    
+    
+            circle_marker_1cde95dcb8857cb7a8b97978172948ba.bindTooltip(
+                `<div>
+                     대성동 555만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4920361c595412ef47a719c7e433402 = L.circleMarker(
+                [36.6277367878267, 127.47673617018],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.175564037317667, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_2829db0b23656203133206884cab9e91 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_24fe42539195cd69d750e6a536063c46 = $(`<div id="html_24fe42539195cd69d750e6a536063c46" style="width: 100.0%; height: 100.0%;"><b>모충동</b><br>평당가: 1016만원<br>평균 거래가: 2.15억<br>거래: 295건</div>`)[0];
+                popup_2829db0b23656203133206884cab9e91.setContent(html_24fe42539195cd69d750e6a536063c46);
+            
+        
+
+        circle_marker_f4920361c595412ef47a719c7e433402.bindPopup(popup_2829db0b23656203133206884cab9e91)
+        ;
+
+        
+    
+    
+            circle_marker_f4920361c595412ef47a719c7e433402.bindTooltip(
+                `<div>
+                     모충동 1016만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5edc4b82f4ee7dfb2632e93218e1a74 = L.circleMarker(
+                [36.6709437868103, 127.448969562021],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.618950038622252, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_81bcf8ece29d237f15e8cf75d148f60e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_aca09fa64a3f6c27a1d91c9439df33ca = $(`<div id="html_aca09fa64a3f6c27a1d91c9439df33ca" style="width: 100.0%; height: 100.0%;"><b>문암동</b><br>평당가: 2092만원<br>평균 거래가: 4.73억<br>거래: 135건</div>`)[0];
+                popup_81bcf8ece29d237f15e8cf75d148f60e.setContent(html_aca09fa64a3f6c27a1d91c9439df33ca);
+            
+        
+
+        circle_marker_a5edc4b82f4ee7dfb2632e93218e1a74.bindPopup(popup_81bcf8ece29d237f15e8cf75d148f60e)
+        ;
+
+        
+    
+    
+            circle_marker_a5edc4b82f4ee7dfb2632e93218e1a74.bindTooltip(
+                `<div>
+                     문암동 2092만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d96ffb2534144ede6fed37f1449743c8 = L.circleMarker(
+                [36.6343422341887, 127.49220671315],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.244997998398398, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_c36f4e45d1a26d910262659b5d181a3c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d480841cc79123c9e43cb1e56063d97f = $(`<div id="html_d480841cc79123c9e43cb1e56063d97f" style="width: 100.0%; height: 100.0%;"><b>문화동</b><br>평당가: 1394만원<br>평균 거래가: 3.66억<br>거래: 39건</div>`)[0];
+                popup_c36f4e45d1a26d910262659b5d181a3c.setContent(html_d480841cc79123c9e43cb1e56063d97f);
+            
+        
+
+        circle_marker_d96ffb2534144ede6fed37f1449743c8.bindPopup(popup_c36f4e45d1a26d910262659b5d181a3c)
+        ;
+
+        
+    
+    
+            circle_marker_d96ffb2534144ede6fed37f1449743c8.bindTooltip(
+                `<div>
+                     문화동 1394만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a5ee9762e4bc6a7cb5c9cb0f567c5e8 = L.circleMarker(
+                [36.6297465199773, 127.670901867467],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.732050807568877, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_8b3a8054c86453a9583533aefb13cfc1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e344d2e3869810dc59b5d7048cbd08a7 = $(`<div id="html_e344d2e3869810dc59b5d7048cbd08a7" style="width: 100.0%; height: 100.0%;"><b>미원면 미원리</b><br>평당가: 330만원<br>평균 거래가: 0.63억<br>거래: 3건</div>`)[0];
+                popup_8b3a8054c86453a9583533aefb13cfc1.setContent(html_e344d2e3869810dc59b5d7048cbd08a7);
+            
+        
+
+        circle_marker_6a5ee9762e4bc6a7cb5c9cb0f567c5e8.bindPopup(popup_8b3a8054c86453a9583533aefb13cfc1)
+        ;
+
+        
+    
+    
+            circle_marker_6a5ee9762e4bc6a7cb5c9cb0f567c5e8.bindTooltip(
+                `<div>
+                     미원면 미원리 330만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c4f157ccf1e2c8827e430b21af7cef7 = L.circleMarker(
+                [36.6025063258561, 127.503605534689],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.278820596099706, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_6310e1f9611f34994022779a41fe95e3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9e6ca1871805ce9bdfc46cee80478ae4 = $(`<div id="html_9e6ca1871805ce9bdfc46cee80478ae4" style="width: 100.0%; height: 100.0%;"><b>방서동</b><br>평당가: 1670만원<br>평균 거래가: 4.10억<br>거래: 265건</div>`)[0];
+                popup_6310e1f9611f34994022779a41fe95e3.setContent(html_9e6ca1871805ce9bdfc46cee80478ae4);
+            
+        
+
+        circle_marker_6c4f157ccf1e2c8827e430b21af7cef7.bindPopup(popup_6310e1f9611f34994022779a41fe95e3)
+        ;
+
+        
+    
+    
+            circle_marker_6c4f157ccf1e2c8827e430b21af7cef7.bindTooltip(
+                `<div>
+                     방서동 1670만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80784a66da92ea28a1924dbdd0620d29 = L.circleMarker(
+                [36.6355252082049, 127.432591426228],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 38.71943060017473, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_d9dff643de5892d5663ee67a4fa4ee41 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f0552beb19a9ec82176477ce8562b6c9 = $(`<div id="html_f0552beb19a9ec82176477ce8562b6c9" style="width: 100.0%; height: 100.0%;"><b>복대동</b><br>평당가: 1515만원<br>평균 거래가: 4.09억<br>거래: 1137건</div>`)[0];
+                popup_d9dff643de5892d5663ee67a4fa4ee41.setContent(html_f0552beb19a9ec82176477ce8562b6c9);
+            
+        
+
+        circle_marker_80784a66da92ea28a1924dbdd0620d29.bindPopup(popup_d9dff643de5892d5663ee67a4fa4ee41)
+        ;
+
+        
+    
+    
+            circle_marker_80784a66da92ea28a1924dbdd0620d29.bindTooltip(
+                `<div>
+                     복대동 1515만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b1721cee05ffdc5076bc27d949c433e = L.circleMarker(
+                [36.6402085390693, 127.459270830959],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.3707055437449, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_02059d2a6ccca11f2707b3f1f49ae49d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_335023bf97e16746e86400b442b2ba0b = $(`<div id="html_335023bf97e16746e86400b442b2ba0b" style="width: 100.0%; height: 100.0%;"><b>봉명동</b><br>평당가: 825만원<br>평균 거래가: 1.42억<br>거래: 268건</div>`)[0];
+                popup_02059d2a6ccca11f2707b3f1f49ae49d.setContent(html_335023bf97e16746e86400b442b2ba0b);
+            
+        
+
+        circle_marker_7b1721cee05ffdc5076bc27d949c433e.bindPopup(popup_02059d2a6ccca11f2707b3f1f49ae49d)
+        ;
+
+        
+    
+    
+            circle_marker_7b1721cee05ffdc5076bc27d949c433e.bindTooltip(
+                `<div>
+                     봉명동 825만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ac23aa370e575003bc523f03d24242a = L.circleMarker(
+                [36.6390661571839, 127.489092460071],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.449489742783178, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_34bba9e63140bc0d0807e56f42a76d44 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_63d6fbc4387d18f1b572f2a0d6d97e24 = $(`<div id="html_63d6fbc4387d18f1b572f2a0d6d97e24" style="width: 100.0%; height: 100.0%;"><b>북문로2가</b><br>평당가: 768만원<br>평균 거래가: 0.50억<br>거래: 6건</div>`)[0];
+                popup_34bba9e63140bc0d0807e56f42a76d44.setContent(html_63d6fbc4387d18f1b572f2a0d6d97e24);
+            
+        
+
+        circle_marker_7ac23aa370e575003bc523f03d24242a.bindPopup(popup_34bba9e63140bc0d0807e56f42a76d44)
+        ;
+
+        
+    
+    
+            circle_marker_7ac23aa370e575003bc523f03d24242a.bindTooltip(
+                `<div>
+                     북문로2가 768만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_166d33c6baf1179d978e6d0ede608d62 = L.circleMarker(
+                [36.6433526976365, 127.4880236891],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.557438524302, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_02d08b8cf21bab64855b05e232ddc7da = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d4233576eb09a6616e3030e305a1a9f4 = $(`<div id="html_d4233576eb09a6616e3030e305a1a9f4" style="width: 100.0%; height: 100.0%;"><b>북문로3가</b><br>평당가: 1326만원<br>평균 거래가: 3.45억<br>거래: 43건</div>`)[0];
+                popup_02d08b8cf21bab64855b05e232ddc7da.setContent(html_d4233576eb09a6616e3030e305a1a9f4);
+            
+        
+
+        circle_marker_166d33c6baf1179d978e6d0ede608d62.bindPopup(popup_02d08b8cf21bab64855b05e232ddc7da)
+        ;
+
+        
+    
+    
+            circle_marker_166d33c6baf1179d978e6d0ede608d62.bindTooltip(
+                `<div>
+                     북문로3가 1326만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_936fd50f18a3593da8abe84f4f816c12 = L.circleMarker(
+                [36.6086905362635, 127.489173316427],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.041630560342615, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_c92ffe57105bba5cfdb5e9fca211af9f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_712dd73b2e8619c7d08b992c0f47a68b = $(`<div id="html_712dd73b2e8619c7d08b992c0f47a68b" style="width: 100.0%; height: 100.0%;"><b>분평동</b><br>평당가: 797만원<br>평균 거래가: 1.66억<br>거래: 578건</div>`)[0];
+                popup_c92ffe57105bba5cfdb5e9fca211af9f.setContent(html_712dd73b2e8619c7d08b992c0f47a68b);
+            
+        
+
+        circle_marker_936fd50f18a3593da8abe84f4f816c12.bindPopup(popup_c92ffe57105bba5cfdb5e9fca211af9f)
+        ;
+
+        
+    
+    
+            circle_marker_936fd50f18a3593da8abe84f4f816c12.bindTooltip(
+                `<div>
+                     분평동 797만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0dfa2ffc78603a5f4564b3e784039a2d = L.circleMarker(
+                [36.6302053422603, 127.416287380593],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.11724276862369, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_143c1eaa33cf8a25f554b2e64a6a1176 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cae976bc49d3ff890d041422e9227d60 = $(`<div id="html_cae976bc49d3ff890d041422e9227d60" style="width: 100.0%; height: 100.0%;"><b>비하동</b><br>평당가: 1201만원<br>평균 거래가: 2.88억<br>거래: 293건</div>`)[0];
+                popup_143c1eaa33cf8a25f554b2e64a6a1176.setContent(html_cae976bc49d3ff890d041422e9227d60);
+            
+        
+
+        circle_marker_0dfa2ffc78603a5f4564b3e784039a2d.bindPopup(popup_143c1eaa33cf8a25f554b2e64a6a1176)
+        ;
+
+        
+    
+    
+            circle_marker_0dfa2ffc78603a5f4564b3e784039a2d.bindTooltip(
+                `<div>
+                     비하동 1201만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0d81940bb450113078e771ca988d17e = L.circleMarker(
+                [36.6362456170936, 127.476193741075],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.1657508881031, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_e9c94735b3da1419fa40347ae2c30413 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a7ca1ec36e4f5c4afd5a2752cea3d043 = $(`<div id="html_a7ca1ec36e4f5c4afd5a2752cea3d043" style="width: 100.0%; height: 100.0%;"><b>사직동</b><br>평당가: 1093만원<br>평균 거래가: 3.00억<br>거래: 230건</div>`)[0];
+                popup_e9c94735b3da1419fa40347ae2c30413.setContent(html_a7ca1ec36e4f5c4afd5a2752cea3d043);
+            
+        
+
+        circle_marker_d0d81940bb450113078e771ca988d17e.bindPopup(popup_e9c94735b3da1419fa40347ae2c30413)
+        ;
+
+        
+    
+    
+            circle_marker_d0d81940bb450113078e771ca988d17e.bindTooltip(
+                `<div>
+                     사직동 1093만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b268f28a2d811fad615e97374f424e3e = L.circleMarker(
+                [36.6335884688597, 127.458900583359],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.433981132056603, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_3d8c2f27f703b5bb52282a324ee212b9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7330627993743c20ea2f5388d28136a0 = $(`<div id="html_7330627993743c20ea2f5388d28136a0" style="width: 100.0%; height: 100.0%;"><b>사창동</b><br>평당가: 926만원<br>평균 거래가: 1.69억<br>거래: 89건</div>`)[0];
+                popup_3d8c2f27f703b5bb52282a324ee212b9.setContent(html_7330627993743c20ea2f5388d28136a0);
+            
+        
+
+        circle_marker_b268f28a2d811fad615e97374f424e3e.bindPopup(popup_3d8c2f27f703b5bb52282a324ee212b9)
+        ;
+
+        
+    
+    
+            circle_marker_b268f28a2d811fad615e97374f424e3e.bindTooltip(
+                `<div>
+                     사창동 926만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c259f8d326737d92ca180a80656634e3 = L.circleMarker(
+                [36.6720062328194, 127.472489780933],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.394804318340654, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_58c126994e0d8ac9c83f11c3fb8790d2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_544362664a99721bf3c138cad844e172 = $(`<div id="html_544362664a99721bf3c138cad844e172" style="width: 100.0%; height: 100.0%;"><b>사천동</b><br>평당가: 883만원<br>평균 거래가: 1.97억<br>거래: 237건</div>`)[0];
+                popup_58c126994e0d8ac9c83f11c3fb8790d2.setContent(html_544362664a99721bf3c138cad844e172);
+            
+        
+
+        circle_marker_c259f8d326737d92ca180a80656634e3.bindPopup(popup_58c126994e0d8ac9c83f11c3fb8790d2)
+        ;
+
+        
+    
+    
+            circle_marker_c259f8d326737d92ca180a80656634e3.bindTooltip(
+                `<div>
+                     사천동 883만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_603549c23a281ca4a7d5649bdf1d6bf0 = L.circleMarker(
+                [36.6132494857069, 127.466904217758],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.97056274847714, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_c4d41826e955c74919eaed76de609093 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_02c5564797894841932271f7f4b5ca30 = $(`<div id="html_02c5564797894841932271f7f4b5ca30" style="width: 100.0%; height: 100.0%;"><b>산남동</b><br>평당가: 1166만원<br>평균 거래가: 2.73억<br>거래: 288건</div>`)[0];
+                popup_c4d41826e955c74919eaed76de609093.setContent(html_02c5564797894841932271f7f4b5ca30);
+            
+        
+
+        circle_marker_603549c23a281ca4a7d5649bdf1d6bf0.bindPopup(popup_c4d41826e955c74919eaed76de609093)
+        ;
+
+        
+    
+    
+            circle_marker_603549c23a281ca4a7d5649bdf1d6bf0.bindTooltip(
+                `<div>
+                     산남동 1166만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6fa1288fbf4ec2773b4f3068d763923d = L.circleMarker(
+                [36.6114477818915, 127.452746785498],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.489125293076057, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_0a6bf36e2841dd0ce8a4b2812278f721 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9ddfe80dfc37ba2155fbded6a35617c7 = $(`<div id="html_9ddfe80dfc37ba2155fbded6a35617c7" style="width: 100.0%; height: 100.0%;"><b>성화동</b><br>평당가: 1251만원<br>평균 거래가: 3.40억<br>거래: 132건</div>`)[0];
+                popup_0a6bf36e2841dd0ce8a4b2812278f721.setContent(html_9ddfe80dfc37ba2155fbded6a35617c7);
+            
+        
+
+        circle_marker_6fa1288fbf4ec2773b4f3068d763923d.bindPopup(popup_0a6bf36e2841dd0ce8a4b2812278f721)
+        ;
+
+        
+    
+    
+            circle_marker_6fa1288fbf4ec2773b4f3068d763923d.bindTooltip(
+                `<div>
+                     성화동 1251만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6aea2e945b5a1850689999bb19f0272 = L.circleMarker(
+                [36.664526863453, 127.456793410394],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.866068747318508, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_4a95b78fc6aa98b26432ea3f3240744d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d96af562a57bbeee6c6ba2496ebdb9d9 = $(`<div id="html_d96af562a57bbeee6c6ba2496ebdb9d9" style="width: 100.0%; height: 100.0%;"><b>송절동</b><br>평당가: 1751만원<br>평균 거래가: 4.45억<br>거래: 221건</div>`)[0];
+                popup_4a95b78fc6aa98b26432ea3f3240744d.setContent(html_d96af562a57bbeee6c6ba2496ebdb9d9);
+            
+        
+
+        circle_marker_a6aea2e945b5a1850689999bb19f0272.bindPopup(popup_4a95b78fc6aa98b26432ea3f3240744d)
+        ;
+
+        
+    
+    
+            circle_marker_a6aea2e945b5a1850689999bb19f0272.bindTooltip(
+                `<div>
+                     송절동 1751만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c9c2a90591a812eb1e641d9819e8b98 = L.circleMarker(
+                [36.6183926172788, 127.479741609875],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_e90121aaab7aae3d22f9e59a7228eee8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_235404a1cb26b62ce83b8503e2a2f504 = $(`<div id="html_235404a1cb26b62ce83b8503e2a2f504" style="width: 100.0%; height: 100.0%;"><b>수곡동</b><br>평당가: 959만원<br>평균 거래가: 2.05억<br>거래: 289건</div>`)[0];
+                popup_e90121aaab7aae3d22f9e59a7228eee8.setContent(html_235404a1cb26b62ce83b8503e2a2f504);
+            
+        
+
+        circle_marker_4c9c2a90591a812eb1e641d9819e8b98.bindPopup(popup_e90121aaab7aae3d22f9e59a7228eee8)
+        ;
+
+        
+    
+    
+            circle_marker_4c9c2a90591a812eb1e641d9819e8b98.bindTooltip(
+                `<div>
+                     수곡동 959만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b7a4d6fd17c1f93e78af37af681d98c = L.circleMarker(
+                [36.6421450641971, 127.496773951644],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.414213562373095, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_26f17a49696d7b843d4cfa9fa2dc75f5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9bf5b5fd3344467caf191fb07c1d25df = $(`<div id="html_9bf5b5fd3344467caf191fb07c1d25df" style="width: 100.0%; height: 100.0%;"><b>수동</b><br>평당가: 339만원<br>평균 거래가: 1.03억<br>거래: 2건</div>`)[0];
+                popup_26f17a49696d7b843d4cfa9fa2dc75f5.setContent(html_9bf5b5fd3344467caf191fb07c1d25df);
+            
+        
+
+        circle_marker_5b7a4d6fd17c1f93e78af37af681d98c.bindPopup(popup_26f17a49696d7b843d4cfa9fa2dc75f5)
+        ;
+
+        
+    
+    
+            circle_marker_5b7a4d6fd17c1f93e78af37af681d98c.bindTooltip(
+                `<div>
+                     수동 339만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5485406515cc69a9aaf4d66f006ec95c = L.circleMarker(
+                [36.6589653773865, 127.468786256617],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.24744871391589, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_a46c366811aa9ded48e5ed888656ea6a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ba8070252a46147643c48cc853047a8d = $(`<div id="html_ba8070252a46147643c48cc853047a8d" style="width: 100.0%; height: 100.0%;"><b>신봉동</b><br>평당가: 684만원<br>평균 거래가: 1.44억<br>거래: 150건</div>`)[0];
+                popup_a46c366811aa9ded48e5ed888656ea6a.setContent(html_ba8070252a46147643c48cc853047a8d);
+            
+        
+
+        circle_marker_5485406515cc69a9aaf4d66f006ec95c.bindPopup(popup_a46c366811aa9ded48e5ed888656ea6a)
+        ;
+
+        
+    
+    
+            circle_marker_5485406515cc69a9aaf4d66f006ec95c.bindTooltip(
+                `<div>
+                     신봉동 684만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_344112dc60636100be92dd8fcacae01e = L.circleMarker(
+                [36.6424150986235, 127.485481647239],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.82842712474619, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_237d2155222a486ce010e4666fd9d481 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_65f2c9096ba1dd213b6adaa8244ea1f4 = $(`<div id="html_65f2c9096ba1dd213b6adaa8244ea1f4" style="width: 100.0%; height: 100.0%;"><b>영동</b><br>평당가: 560만원<br>평균 거래가: 1.23억<br>거래: 8건</div>`)[0];
+                popup_237d2155222a486ce010e4666fd9d481.setContent(html_65f2c9096ba1dd213b6adaa8244ea1f4);
+            
+        
+
+        circle_marker_344112dc60636100be92dd8fcacae01e.bindPopup(popup_237d2155222a486ce010e4666fd9d481)
+        ;
+
+        
+    
+    
+            circle_marker_344112dc60636100be92dd8fcacae01e.bindTooltip(
+                `<div>
+                     영동 560만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fefcb73562ef50040a02f03d6a1a9a9b = L.circleMarker(
+                [36.618004162196, 127.498850292467],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.601470508735446, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_0f5d22c8b517eb6aa2a430aafe3e4f72 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_464fd700d96e9f085d86e816b421cdb6 = $(`<div id="html_464fd700d96e9f085d86e816b421cdb6" style="width: 100.0%; height: 100.0%;"><b>영운동</b><br>평당가: 531만원<br>평균 거래가: 0.90억<br>거래: 185건</div>`)[0];
+                popup_0f5d22c8b517eb6aa2a430aafe3e4f72.setContent(html_464fd700d96e9f085d86e816b421cdb6);
+            
+        
+
+        circle_marker_fefcb73562ef50040a02f03d6a1a9a9b.bindPopup(popup_0f5d22c8b517eb6aa2a430aafe3e4f72)
+        ;
+
+        
+    
+    
+            circle_marker_fefcb73562ef50040a02f03d6a1a9a9b.bindTooltip(
+                `<div>
+                     영운동 531만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c1ad37423b94a5eada4941d3227c44b = L.circleMarker(
+                [36.620107749828, 127.341923758559],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.732050807568877, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_6cc7ede7bb55dfb5d6014c79d62cd046 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e4eecb66da401e64e48bc3a0f9826015 = $(`<div id="html_e4eecb66da401e64e48bc3a0f9826015" style="width: 100.0%; height: 100.0%;"><b>오송읍 궁평리</b><br>평당가: 683만원<br>평균 거래가: 1.23억<br>거래: 3건</div>`)[0];
+                popup_6cc7ede7bb55dfb5d6014c79d62cd046.setContent(html_e4eecb66da401e64e48bc3a0f9826015);
+            
+        
+
+        circle_marker_4c1ad37423b94a5eada4941d3227c44b.bindPopup(popup_6cc7ede7bb55dfb5d6014c79d62cd046)
+        ;
+
+        
+    
+    
+            circle_marker_4c1ad37423b94a5eada4941d3227c44b.bindTooltip(
+                `<div>
+                     오송읍 궁평리 683만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72d7a68187812a407528333fd463e381 = L.circleMarker(
+                [36.6306803066681, 127.334144052297],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.47213595499958, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_554545a41632bf7aa0637b2bda9f8220 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f6dc3cba92f5e8382b8c8d14cebc936c = $(`<div id="html_f6dc3cba92f5e8382b8c8d14cebc936c" style="width: 100.0%; height: 100.0%;"><b>오송읍 만수리</b><br>평당가: 1230만원<br>평균 거래가: 3.16억<br>거래: 20건</div>`)[0];
+                popup_554545a41632bf7aa0637b2bda9f8220.setContent(html_f6dc3cba92f5e8382b8c8d14cebc936c);
+            
+        
+
+        circle_marker_72d7a68187812a407528333fd463e381.bindPopup(popup_554545a41632bf7aa0637b2bda9f8220)
+        ;
+
+        
+    
+    
+            circle_marker_72d7a68187812a407528333fd463e381.bindTooltip(
+                `<div>
+                     오송읍 만수리 1230만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5495666890b51b55f252fcf4146eac1c = L.circleMarker(
+                [36.6139906498552, 127.314510216438],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.832554500127006, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_523c75909f8b514daa68df7a80ed6805 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_36f981cb04809328a05bf6e20da9ef4c = $(`<div id="html_36f981cb04809328a05bf6e20da9ef4c" style="width: 100.0%; height: 100.0%;"><b>오송읍 봉산리</b><br>평당가: 1572만원<br>평균 거래가: 3.66억<br>거래: 318건</div>`)[0];
+                popup_523c75909f8b514daa68df7a80ed6805.setContent(html_36f981cb04809328a05bf6e20da9ef4c);
+            
+        
+
+        circle_marker_5495666890b51b55f252fcf4146eac1c.bindPopup(popup_523c75909f8b514daa68df7a80ed6805)
+        ;
+
+        
+    
+    
+            circle_marker_5495666890b51b55f252fcf4146eac1c.bindTooltip(
+                `<div>
+                     오송읍 봉산리 1572만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff3d98a2488c4bb0d143bab4d8cb346a = L.circleMarker(
+                [36.5941300632588, 127.314317845967],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.3166247903554, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_570743e6931e483d403b6770f53e5d4c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7930ac7f267beed76020657e053263ba = $(`<div id="html_7930ac7f267beed76020657e053263ba" style="width: 100.0%; height: 100.0%;"><b>오송읍 서평리</b><br>평당가: 468만원<br>평균 거래가: 0.32억<br>거래: 11건</div>`)[0];
+                popup_570743e6931e483d403b6770f53e5d4c.setContent(html_7930ac7f267beed76020657e053263ba);
+            
+        
+
+        circle_marker_ff3d98a2488c4bb0d143bab4d8cb346a.bindPopup(popup_570743e6931e483d403b6770f53e5d4c)
+        ;
+
+        
+    
+    
+            circle_marker_ff3d98a2488c4bb0d143bab4d8cb346a.bindTooltip(
+                `<div>
+                     오송읍 서평리 468만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7dc8f2677052f84ef29663241c64e9d6 = L.circleMarker(
+                [36.6337083326091, 127.320954572855],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.583005244258363, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_3b2e4cfc1ee4b1637f9e5deb9edae8ee = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bb2bf3f474288635888d03ef516efa32 = $(`<div id="html_bb2bf3f474288635888d03ef516efa32" style="width: 100.0%; height: 100.0%;"><b>오송읍 연제리</b><br>평당가: 1408만원<br>평균 거래가: 3.91억<br>거래: 112건</div>`)[0];
+                popup_3b2e4cfc1ee4b1637f9e5deb9edae8ee.setContent(html_bb2bf3f474288635888d03ef516efa32);
+            
+        
+
+        circle_marker_7dc8f2677052f84ef29663241c64e9d6.bindPopup(popup_3b2e4cfc1ee4b1637f9e5deb9edae8ee)
+        ;
+
+        
+    
+    
+            circle_marker_7dc8f2677052f84ef29663241c64e9d6.bindTooltip(
+                `<div>
+                     오송읍 연제리 1408만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27d1cea82d65cbe249cdae466bc4954d = L.circleMarker(
+                [36.6082161515086, 127.334373499597],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.449489742783178, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_2b1ef88a85c5854fd5d20cc6f81beb10 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6d647070567cad442d64b7299fb85553 = $(`<div id="html_6d647070567cad442d64b7299fb85553" style="width: 100.0%; height: 100.0%;"><b>오송읍 오송리</b><br>평당가: 767만원<br>평균 거래가: 1.38억<br>거래: 6건</div>`)[0];
+                popup_2b1ef88a85c5854fd5d20cc6f81beb10.setContent(html_6d647070567cad442d64b7299fb85553);
+            
+        
+
+        circle_marker_27d1cea82d65cbe249cdae466bc4954d.bindPopup(popup_2b1ef88a85c5854fd5d20cc6f81beb10)
+        ;
+
+        
+    
+    
+            circle_marker_27d1cea82d65cbe249cdae466bc4954d.bindTooltip(
+                `<div>
+                     오송읍 오송리 767만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f656bcd492fe8aa200d08e4263ac7f0 = L.circleMarker(
+                [36.6217958824441, 127.304256956297],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.23606797749979, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_0cca96846195d8f25bae0700b20d081f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f792baf2bb555cde187a1d4d2edf6abc = $(`<div id="html_f792baf2bb555cde187a1d4d2edf6abc" style="width: 100.0%; height: 100.0%;"><b>오송읍 정중리</b><br>평당가: 585만원<br>평균 거래가: 1.23억<br>거래: 5건</div>`)[0];
+                popup_0cca96846195d8f25bae0700b20d081f.setContent(html_f792baf2bb555cde187a1d4d2edf6abc);
+            
+        
+
+        circle_marker_3f656bcd492fe8aa200d08e4263ac7f0.bindPopup(popup_0cca96846195d8f25bae0700b20d081f)
+        ;
+
+        
+    
+    
+            circle_marker_3f656bcd492fe8aa200d08e4263ac7f0.bindTooltip(
+                `<div>
+                     오송읍 정중리 585만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8c0bba67c40de33010ac9fca0b8a11c = L.circleMarker(
+                [36.7052908521151, 127.426446367618],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.715633383201094, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_219e620d492b9014ee8153b074920269 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1bf46f53c29a30276a0a1c15134e1942 = $(`<div id="html_1bf46f53c29a30276a0a1c15134e1942" style="width: 100.0%; height: 100.0%;"><b>오창읍 각리</b><br>평당가: 1194만원<br>평균 거래가: 2.87억<br>거래: 516건</div>`)[0];
+                popup_219e620d492b9014ee8153b074920269.setContent(html_1bf46f53c29a30276a0a1c15134e1942);
+            
+        
+
+        circle_marker_a8c0bba67c40de33010ac9fca0b8a11c.bindPopup(popup_219e620d492b9014ee8153b074920269)
+        ;
+
+        
+    
+    
+            circle_marker_a8c0bba67c40de33010ac9fca0b8a11c.bindTooltip(
+                `<div>
+                     오창읍 각리 1194만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de8487173d26eaff7b0f9d43d509ecd8 = L.circleMarker(
+                [36.727950710457, 127.468081310795],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.3166247903554, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_7137c0b84cf9f83f4fe93950a664750c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ef706fb598b5661f6d25ea6d897d4e05 = $(`<div id="html_ef706fb598b5661f6d25ea6d897d4e05" style="width: 100.0%; height: 100.0%;"><b>오창읍 괴정리</b><br>평당가: 491만원<br>평균 거래가: 0.89억<br>거래: 11건</div>`)[0];
+                popup_7137c0b84cf9f83f4fe93950a664750c.setContent(html_ef706fb598b5661f6d25ea6d897d4e05);
+            
+        
+
+        circle_marker_de8487173d26eaff7b0f9d43d509ecd8.bindPopup(popup_7137c0b84cf9f83f4fe93950a664750c)
+        ;
+
+        
+    
+    
+            circle_marker_de8487173d26eaff7b0f9d43d509ecd8.bindTooltip(
+                `<div>
+                     오창읍 괴정리 491만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e528008e88fee9bf02152acdd2ebf92 = L.circleMarker(
+                [36.748442551031, 127.436655387583],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.242640687119284, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_85c60aaa258160d87f7d5d186c57ce81 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2acbc80ee17bde598ade8844a6d75cd9 = $(`<div id="html_2acbc80ee17bde598ade8844a6d75cd9" style="width: 100.0%; height: 100.0%;"><b>오창읍 복현리</b><br>평당가: 440만원<br>평균 거래가: 0.61억<br>거래: 18건</div>`)[0];
+                popup_85c60aaa258160d87f7d5d186c57ce81.setContent(html_2acbc80ee17bde598ade8844a6d75cd9);
+            
+        
+
+        circle_marker_9e528008e88fee9bf02152acdd2ebf92.bindPopup(popup_85c60aaa258160d87f7d5d186c57ce81)
+        ;
+
+        
+    
+    
+            circle_marker_9e528008e88fee9bf02152acdd2ebf92.bindTooltip(
+                `<div>
+                     오창읍 복현리 440만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb69f0e069fd06666f92e9d84237b61d = L.circleMarker(
+                [36.723124215334, 127.431882208368],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.64911064067352, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_0eb48d3afd99a5dc5c053365807bd036 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d0ebf937c462ad9172d4adbb700686e8 = $(`<div id="html_d0ebf937c462ad9172d4adbb700686e8" style="width: 100.0%; height: 100.0%;"><b>오창읍 양청리</b><br>평당가: 1637만원<br>평균 거래가: 3.69억<br>거래: 160건</div>`)[0];
+                popup_0eb48d3afd99a5dc5c053365807bd036.setContent(html_d0ebf937c462ad9172d4adbb700686e8);
+            
+        
+
+        circle_marker_fb69f0e069fd06666f92e9d84237b61d.bindPopup(popup_0eb48d3afd99a5dc5c053365807bd036)
+        ;
+
+        
+    
+    
+            circle_marker_fb69f0e069fd06666f92e9d84237b61d.bindTooltip(
+                `<div>
+                     오창읍 양청리 1637만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31e8168e429ed6c64dd19cfcc6554683 = L.circleMarker(
+                [36.7392675491031, 127.462847467359],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.23606797749979, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_8219eae07092bdbf48cc2ab21c736356 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3d5398450261a998574346fad01059a8 = $(`<div id="html_3d5398450261a998574346fad01059a8" style="width: 100.0%; height: 100.0%;"><b>오창읍 장대리</b><br>평당가: 414만원<br>평균 거래가: 0.75억<br>거래: 5건</div>`)[0];
+                popup_8219eae07092bdbf48cc2ab21c736356.setContent(html_3d5398450261a998574346fad01059a8);
+            
+        
+
+        circle_marker_31e8168e429ed6c64dd19cfcc6554683.bindPopup(popup_8219eae07092bdbf48cc2ab21c736356)
+        ;
+
+        
+    
+    
+            circle_marker_31e8168e429ed6c64dd19cfcc6554683.bindTooltip(
+                `<div>
+                     오창읍 장대리 414만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_493c4f7e87ca28dc1f9e3dc89b8de3f0 = L.circleMarker(
+                [36.7344283989387, 127.445416030551],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.306623862918075, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_877712a2d296a48fcb43704867c0279d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fe46d31990e0573a893fc2174baf7abc = $(`<div id="html_fe46d31990e0573a893fc2174baf7abc" style="width: 100.0%; height: 100.0%;"><b>오창읍 주성리</b><br>평당가: 1317만원<br>평균 거래가: 3.22억<br>거래: 69건</div>`)[0];
+                popup_877712a2d296a48fcb43704867c0279d.setContent(html_fe46d31990e0573a893fc2174baf7abc);
+            
+        
+
+        circle_marker_493c4f7e87ca28dc1f9e3dc89b8de3f0.bindPopup(popup_877712a2d296a48fcb43704867c0279d)
+        ;
+
+        
+    
+    
+            circle_marker_493c4f7e87ca28dc1f9e3dc89b8de3f0.bindTooltip(
+                `<div>
+                     오창읍 주성리 1317만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac98b3835512223ff0dcabab385b680f = L.circleMarker(
+                [36.7396435173441, 127.455083957263],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.770329614269007, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_81356666f22095ce43fe9de0eb1706ed = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f2e4c422005270d156486988a795184 = $(`<div id="html_2f2e4c422005270d156486988a795184" style="width: 100.0%; height: 100.0%;"><b>오창읍 창리</b><br>평당가: 1246만원<br>평균 거래가: 2.60억<br>거래: 116건</div>`)[0];
+                popup_81356666f22095ce43fe9de0eb1706ed.setContent(html_2f2e4c422005270d156486988a795184);
+            
+        
+
+        circle_marker_ac98b3835512223ff0dcabab385b680f.bindPopup(popup_81356666f22095ce43fe9de0eb1706ed)
+        ;
+
+        
+    
+    
+            circle_marker_ac98b3835512223ff0dcabab385b680f.bindTooltip(
+                `<div>
+                     오창읍 창리 1246만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb1df81882ad3c88212f7286e4084c1d = L.circleMarker(
+                [36.6724054571913, 127.384583579837],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.7648230602334, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_583c77fc145f07129a8a97f0867ccc24 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_607e85e490b5ca6891e6890f10ea9b4f = $(`<div id="html_607e85e490b5ca6891e6890f10ea9b4f" style="width: 100.0%; height: 100.0%;"><b>옥산면 가락리</b><br>평당가: 1194만원<br>평균 거래가: 2.76억<br>거래: 218건</div>`)[0];
+                popup_583c77fc145f07129a8a97f0867ccc24.setContent(html_607e85e490b5ca6891e6890f10ea9b4f);
+            
+        
+
+        circle_marker_bb1df81882ad3c88212f7286e4084c1d.bindPopup(popup_583c77fc145f07129a8a97f0867ccc24)
+        ;
+
+        
+    
+    
+            circle_marker_bb1df81882ad3c88212f7286e4084c1d.bindTooltip(
+                `<div>
+                     옥산면 가락리 1194만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9717af886c6e9797786d63ebb22ca97 = L.circleMarker(
+                [36.6637129671018, 127.370437846518],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.433981132056603, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_5978aaa453505d4687612ec9ab3b8258 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9e96718383c8af2761500151cea9dd7b = $(`<div id="html_9e96718383c8af2761500151cea9dd7b" style="width: 100.0%; height: 100.0%;"><b>옥산면 오산리</b><br>평당가: 446만원<br>평균 거래가: 0.71억<br>거래: 89건</div>`)[0];
+                popup_5978aaa453505d4687612ec9ab3b8258.setContent(html_9e96718383c8af2761500151cea9dd7b);
+            
+        
+
+        circle_marker_d9717af886c6e9797786d63ebb22ca97.bindPopup(popup_5978aaa453505d4687612ec9ab3b8258)
+        ;
+
+        
+    
+    
+            circle_marker_d9717af886c6e9797786d63ebb22ca97.bindTooltip(
+                `<div>
+                     옥산면 오산리 446만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa898e1814ca9133ba0c8b57e17ca25e = L.circleMarker(
+                [36.6389183635711, 127.507196946405],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.594519519326425, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_5800fac13be3d3de7c4570819bc824da = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4e67f93b06521894ec16d87697a4a6d2 = $(`<div id="html_4e67f93b06521894ec16d87697a4a6d2" style="width: 100.0%; height: 100.0%;"><b>용담동</b><br>평당가: 1086만원<br>평균 거래가: 2.78억<br>거래: 213건</div>`)[0];
+                popup_5800fac13be3d3de7c4570819bc824da.setContent(html_4e67f93b06521894ec16d87697a4a6d2);
+            
+        
+
+        circle_marker_aa898e1814ca9133ba0c8b57e17ca25e.bindPopup(popup_5800fac13be3d3de7c4570819bc824da)
+        ;
+
+        
+    
+    
+            circle_marker_aa898e1814ca9133ba0c8b57e17ca25e.bindTooltip(
+                `<div>
+                     용담동 1086만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08903b33faffe0b9b441a5fd0f87eb9a = L.circleMarker(
+                [36.6127305001122, 127.508290728125],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.032241298365804, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_5b9f8decd1ad7db8c53cc53897e6b97c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1b6799de1301608ab344c85ce87a17d4 = $(`<div id="html_1b6799de1301608ab344c85ce87a17d4" style="width: 100.0%; height: 100.0%;"><b>용암동</b><br>평당가: 997만원<br>평균 거래가: 2.32억<br>거래: 963건</div>`)[0];
+                popup_5b9f8decd1ad7db8c53cc53897e6b97c.setContent(html_1b6799de1301608ab344c85ce87a17d4);
+            
+        
+
+        circle_marker_08903b33faffe0b9b441a5fd0f87eb9a.bindPopup(popup_5b9f8decd1ad7db8c53cc53897e6b97c)
+        ;
+
+        
+    
+    
+            circle_marker_08903b33faffe0b9b441a5fd0f87eb9a.bindTooltip(
+                `<div>
+                     용암동 997만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_610098d59f22f8c797b2150b53323e2a = L.circleMarker(
+                [36.635501061847, 127.526361493107],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.539392014169456, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_9687a4ad6aec2f28e7982c7371efa29c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7327b5c2495f44720cab82a3365d68df = $(`<div id="html_7327b5c2495f44720cab82a3365d68df" style="width: 100.0%; height: 100.0%;"><b>용정동</b><br>평당가: 1360만원<br>평균 거래가: 3.79억<br>거래: 91건</div>`)[0];
+                popup_9687a4ad6aec2f28e7982c7371efa29c.setContent(html_7327b5c2495f44720cab82a3365d68df);
+            
+        
+
+        circle_marker_610098d59f22f8c797b2150b53323e2a.bindPopup(popup_9687a4ad6aec2f28e7982c7371efa29c)
+        ;
+
+        
+    
+    
+            circle_marker_610098d59f22f8c797b2150b53323e2a.bindTooltip(
+                `<div>
+                     용정동 1360만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7db9eca5382e9de6f685ba938fb5e2f = L.circleMarker(
+                [36.6492363833712, 127.486866445706],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.1104335791443, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_605c73a93ced5a67b67157478e4a61a6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a5b3bf74e33930e5e7eefc1229acd7f6 = $(`<div id="html_a5b3bf74e33930e5e7eefc1229acd7f6" style="width: 100.0%; height: 100.0%;"><b>우암동</b><br>평당가: 803만원<br>평균 거래가: 0.94억<br>거래: 83건</div>`)[0];
+                popup_605c73a93ced5a67b67157478e4a61a6.setContent(html_a5b3bf74e33930e5e7eefc1229acd7f6);
+            
+        
+
+        circle_marker_e7db9eca5382e9de6f685ba938fb5e2f.bindPopup(popup_605c73a93ced5a67b67157478e4a61a6)
+        ;
+
+        
+    
+    
+            circle_marker_e7db9eca5382e9de6f685ba938fb5e2f.bindTooltip(
+                `<div>
+                     우암동 803만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a769b9b9388be21371bf3a5b1dc7e3d6 = L.circleMarker(
+                [36.6484761397905, 127.475186506455],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.602325267042627, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_16d9907149cf71b036de550bc65044d8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_855fd2045c67097806c4d05418b31fb9 = $(`<div id="html_855fd2045c67097806c4d05418b31fb9" style="width: 100.0%; height: 100.0%;"><b>운천동</b><br>평당가: 598만원<br>평균 거래가: 0.94억<br>거래: 74건</div>`)[0];
+                popup_16d9907149cf71b036de550bc65044d8.setContent(html_855fd2045c67097806c4d05418b31fb9);
+            
+        
+
+        circle_marker_a769b9b9388be21371bf3a5b1dc7e3d6.bindPopup(popup_16d9907149cf71b036de550bc65044d8)
+        ;
+
+        
+    
+    
+            circle_marker_a769b9b9388be21371bf3a5b1dc7e3d6.bindTooltip(
+                `<div>
+                     운천동 598만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_abe6c50e18dd42c16294d99712fb2576 = L.circleMarker(
+                [36.6638539046001, 127.515682376257],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.372115213907882, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_5bbcd6753300363f869f757e2016146d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_93bf3317e585eff29b7c77f5474ebd1e = $(`<div id="html_93bf3317e585eff29b7c77f5474ebd1e" style="width: 100.0%; height: 100.0%;"><b>율량동</b><br>평당가: 860만원<br>평균 거래가: 1.84억<br>거래: 594건</div>`)[0];
+                popup_5bbcd6753300363f869f757e2016146d.setContent(html_93bf3317e585eff29b7c77f5474ebd1e);
+            
+        
+
+        circle_marker_abe6c50e18dd42c16294d99712fb2576.bindPopup(popup_5bbcd6753300363f869f757e2016146d)
+        ;
+
+        
+    
+    
+            circle_marker_abe6c50e18dd42c16294d99712fb2576.bindTooltip(
+                `<div>
+                     율량동 860만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab63d4a7e7aea0e95a56071bf9c43510 = L.circleMarker(
+                [36.6759298872128, 127.502817298991],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.488088481701515, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_8bfb1ca97cfb7e41fb36d2af446b1365 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2bcd967dad20f59b6bb275142cecb217 = $(`<div id="html_2bcd967dad20f59b6bb275142cecb217" style="width: 100.0%; height: 100.0%;"><b>주성동</b><br>평당가: 1682만원<br>평균 거래가: 4.49억<br>거래: 110건</div>`)[0];
+                popup_8bfb1ca97cfb7e41fb36d2af446b1365.setContent(html_2bcd967dad20f59b6bb275142cecb217);
+            
+        
+
+        circle_marker_ab63d4a7e7aea0e95a56071bf9c43510.bindPopup(popup_8bfb1ca97cfb7e41fb36d2af446b1365)
+        ;
+
+        
+    
+    
+            circle_marker_ab63d4a7e7aea0e95a56071bf9c43510.bindTooltip(
+                `<div>
+                     주성동 1682만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07f404266f8e46e3bcfe077384be96c8 = L.circleMarker(
+                [36.6852254990809, 127.488176234716],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.0, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_ce2b8bf9078b4eeb612433d63c9bfb62 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ff034e97254c5d90bae871dda457600 = $(`<div id="html_3ff034e97254c5d90bae871dda457600" style="width: 100.0%; height: 100.0%;"><b>주중동</b><br>평당가: 1689만원<br>평균 거래가: 4.32억<br>거래: 36건</div>`)[0];
+                popup_ce2b8bf9078b4eeb612433d63c9bfb62.setContent(html_3ff034e97254c5d90bae871dda457600);
+            
+        
+
+        circle_marker_07f404266f8e46e3bcfe077384be96c8.bindPopup(popup_ce2b8bf9078b4eeb612433d63c9bfb62)
+        ;
+
+        
+    
+    
+            circle_marker_07f404266f8e46e3bcfe077384be96c8.bindTooltip(
+                `<div>
+                     주중동 1689만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e8c9b0eb66fad26a699167b3bbda411c = L.circleMarker(
+                [36.609849281421, 127.441671683928],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.928203230275509, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_7e63dcb3444222f7a255dc45e8e98179 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e6f4af4a9db6ba84719f7f338984b734 = $(`<div id="html_e6f4af4a9db6ba84719f7f338984b734" style="width: 100.0%; height: 100.0%;"><b>죽림동</b><br>평당가: 975만원<br>평균 거래가: 1.62억<br>거래: 48건</div>`)[0];
+                popup_7e63dcb3444222f7a255dc45e8e98179.setContent(html_e6f4af4a9db6ba84719f7f338984b734);
+            
+        
+
+        circle_marker_e8c9b0eb66fad26a699167b3bbda411c.bindPopup(popup_7e63dcb3444222f7a255dc45e8e98179)
+        ;
+
+        
+    
+    
+            circle_marker_e8c9b0eb66fad26a699167b3bbda411c.bindTooltip(
+                `<div>
+                     죽림동 975만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e62837b3fabf7318265e8ca65e4ae769 = L.circleMarker(
+                [36.6294888640467, 127.497819685813],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.84523257866513, "stroke": true, "weight": 3}
+            ).addTo(map_ca7e8b0c0f3ea91fa84907d9fb8e87ac);
+        
+    
+        var popup_cf09962370aa4f3af44f291981d97646 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1e25fc5d6d17a159fd7ec2ac4b5584f3 = $(`<div id="html_1e25fc5d6d17a159fd7ec2ac4b5584f3" style="width: 100.0%; height: 100.0%;"><b>탑동</b><br>평당가: 1221만원<br>평균 거래가: 2.85억<br>거래: 165건</div>`)[0];
+                popup_cf09962370aa4f3af44f291981d97646.setContent(html_1e25fc5d6d17a159fd7ec2ac4b5584f3);
+            
+        
+
+        circle_marker_e62837b3fabf7318265e8ca65e4ae769.bindPopup(popup_cf09962370aa4f3af44f291981d97646)
+        ;
+
+        
+    
+    
+            circle_marker_e62837b3fabf7318265e8ca65e4ae769.bindTooltip(
+                `<div>
+                     탑동 1221만원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+"""
+청주 우리동네 시세 - Streamlit 웹 대시보드
+
+PostgreSQL의 apt_clean 테이블을 읽어 청주 4개 구의 아파트 실거래가를
+5개 탭(우리 동네, 지도, 가격 분석, 시세 추세, 거래 조회)으로 시각화한다.
+
+사용법: streamlit run src/app.py
+"""
 import os
 import pandas as pd
 import streamlit as st
@@ -14,10 +22,12 @@ st.set_page_config(page_title="청주 우리동네 시세", page_icon="🏠", la
 
 GREEN = "#0F6E56"
 BLUE = "#185FA5"
-GU_COLORS = {"흥덕구": "#0F6E56", "상당구": "#185FA5", "서원구": "#BA7517", "청원구": "#993C1D"}
+GU_COLORS = {"흥덕구": "#0F6E56", "상당구": "#185FA5",
+             "서원구": "#BA7517", "청원구": "#993C1D"}
 
 
 def get_engine():
+    """PostgreSQL 접속 엔진 생성 (.env의 DB_* 값 사용)."""
     return create_engine(
         f"postgresql+psycopg2://"
         f"{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
@@ -28,6 +38,7 @@ def get_engine():
 
 @st.cache_data(ttl=3600)
 def load_data():
+    """apt_clean 테이블 조회. 영문 컬럼을 한글 별칭으로 매핑."""
     engine = get_engine()
     query = """
         SELECT
@@ -52,6 +63,7 @@ def load_data():
 
 @st.cache_data(ttl=3600)
 def load_coords():
+    """동별 좌표 조회 (지도 시각화용)."""
     engine = get_engine()
     query = """
         SELECT

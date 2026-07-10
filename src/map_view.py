@@ -1,48 +1,136 @@
 # -*- coding: utf-8 -*-
 """
-청주 동별 평균 시세 지도 (Folium) -> output/cheongju_map.html
-사용법: python src/map_view.py
+청주 아파트 실거래가 전처리 및 PostgreSQL 적재
+
+data/cheongju_apt_trade.csv를 읽어 다음을 수행한다:
+  1. 거래금액 문자열 → 정수/억 단위 변환
+  2. 날짜 필드 통합(dealYear/Month/Day → 거래일자)
+  3. 파생 컬럼 생성(평수·평당가·연식)
+  4. 취소거래·이상치 제거
+  5. data/cheongju_apt_clean.csv 저장 + PostgreSQL(apt_clean, apt_trade) 적재
+
+사용법: python src/preprocess.py
 """
 import os
 import pandas as pd
-import folium
+from sqlalchemy import create_engine
+from dotenv import load_dotenv
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(BASE, "data")
-OUT = os.path.join(BASE, "output")
 
-df = pd.read_csv(os.path.join(DATA, "cheongju_apt_clean.csv"))
-geo = pd.read_csv(os.path.join(DATA, "dong_coords.csv")).dropna(subset=["위도", "경도"])
+load_dotenv(os.path.join(BASE, ".env"))
 
-agg = df.groupby("동").agg(
-    평당가=("평당가_만원", "mean"),
-    평균가억=("거래금액_억", "mean"),
-    건수=("거래금액_억", "size"),
-).reset_index()
-m_df = agg.merge(geo, on="동", how="inner")
-print(f"지도에 표시할 동: {len(m_df)}개")
+INPUT_CSV = os.path.join(DATA, "cheongju_apt_trade.csv")
+OUTPUT_CSV = os.path.join(DATA, "cheongju_apt_clean.csv")
 
 
-def color(v):
-    if v >= 1400: return "red"
-    if v >= 1100: return "orange"
-    if v >= 900:  return "green"
-    return "blue"
+def get_engine():
+    """PostgreSQL 접속 엔진 생성 (.env의 DB_* 값 사용)."""
+    return create_engine(
+        f"postgresql+psycopg2://"
+        f"{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+        f"@{os.getenv('DB_HOST', 'localhost')}:{os.getenv('DB_PORT', '5432')}"
+        f"/{os.getenv('DB_NAME')}"
+    )
 
 
-m = folium.Map(location=[36.64, 127.49], zoom_start=12, tiles="CartoDB positron")
-for _, r in m_df.iterrows():
-    popup = (f"<b>{r['동']}</b><br>평당가: {r['평당가']:.0f}만원<br>"
-             f"평균 거래가: {r['평균가억']:.2f}억<br>거래: {int(r['건수'])}건")
-    folium.CircleMarker(
-        location=[r["위도"], r["경도"]],
-        radius=5 + (r["건수"] ** 0.5),
-        color=color(r["평당가"]), fill=True, fill_opacity=0.6,
-        popup=folium.Popup(popup, max_width=200),
-        tooltip=f"{r['동']} {r['평당가']:.0f}만원",
-    ).add_to(m)
+def load_to_postgres(clean_df, raw_df):
+    """정제 데이터와 원본 데이터를 PostgreSQL에 적재.
 
-os.makedirs(OUT, exist_ok=True)
-out_path = os.path.join(OUT, "cheongju_map.html")
-m.save(out_path)
-print(f"지도 저장 완료 -> {out_path}")
+    apt_clean: 한글 컬럼을 영문으로 매핑하여 저장 (앱에서 조회)
+    apt_trade: 원본 그대로 저장 (Raw 계층)
+    두 테이블 모두 replace 모드로 매일 전체 재적재.
+    """
+    engine = get_engine()
+
+    clean_for_db = clean_df.rename(columns={
+        "구": "gu",
+        "동": "dong",
+        "아파트명": "apt_name",
+        "거래일자": "trade_date",
+        "거래연월": "trade_year_month",
+        "거래금액_만원": "trade_amount_int",
+        "거래금액_억": "trade_amount_float",
+        "전용면적": "exclusive_area",
+        "평수": "pyeong",
+        "평당가_만원": "pyeong_price",
+        "층": "floor",
+        "건축년도": "build_year",
+        "연식": "age",
+        "거래유형": "trade_type",
+    })
+
+    with engine.begin() as conn:
+        clean_for_db.to_sql("apt_clean", conn, if_exists="replace", index=False)
+        raw_df.to_sql("apt_trade", conn, if_exists="replace", index=False)
+
+    print(f"PostgreSQL 적재 완료: apt_clean {len(clean_for_db):,}건, "
+          f"apt_trade {len(raw_df):,}건")
+
+
+def main():
+    df = pd.read_csv(INPUT_CSV)
+    raw_df = df.copy()
+    n0 = len(df)
+    print(f"원본: {n0:,}건, 컬럼 {df.shape[1]}개")
+
+    # 1) 거래금액: "8,900"(문자, 만원) → 정수(만원) + 억원 파생
+    df["거래금액_만원"] = (
+        df["dealAmount"].astype(str).str.replace(",", "", regex=False).str.strip()
+    )
+    df["거래금액_만원"] = pd.to_numeric(df["거래금액_만원"], errors="coerce")
+    df["거래금액_억"] = (df["거래금액_만원"] / 10000).round(2)
+
+    # 2) 숫자형 컬럼 캐스팅
+    df["전용면적"] = pd.to_numeric(df["excluUseAr"], errors="coerce")
+    df["층"] = pd.to_numeric(df["floor"], errors="coerce")
+    df["건축년도"] = pd.to_numeric(df["buildYear"], errors="coerce")
+
+    # 3) 분리된 연/월/일을 거래일자(date)로 통합, 월별 집계용 거래연월 생성
+    df["거래일자"] = pd.to_datetime(
+        dict(year=df["dealYear"], month=df["dealMonth"], day=df["dealDay"]),
+        errors="coerce",
+    )
+    df["거래연월"] = df["거래일자"].dt.to_period("M").astype(str)
+
+    # 4) 파생 컬럼: 평수(3.3058㎡/평), 평당가, 연식
+    df["평수"] = df["전용면적"] / 3.3058
+    df["평당가_만원"] = (df["거래금액_만원"] / df["평수"]).round(1)
+    df["연식"] = df["거래일자"].dt.year - df["건축년도"]
+
+    # 5) 취소거래(cdealType 값 존재) 및 결측/비정상 값 제거
+    if "cdealType" in df.columns:
+        cancel = df["cdealType"].astype(str).str.strip()
+        is_cancel = cancel.notna() & (cancel != "") & (cancel.str.lower() != "nan")
+        before = len(df)
+        df = df[~is_cancel]
+        print(f"취소거래 제외: {before - len(df):,}건")
+
+    df = df.dropna(subset=["거래금액_만원", "전용면적", "거래일자"])
+    df = df[(df["전용면적"] > 0) & (df["거래금액_만원"] > 0)]
+
+    # 6) 최종 컬럼 정리 및 이름 매핑
+    keep = [
+        "구", "umdNm", "aptNm", "거래일자", "거래연월",
+        "거래금액_만원", "거래금액_억", "전용면적", "평수", "평당가_만원",
+        "층", "건축년도", "연식", "dealingGbn",
+    ]
+    keep = [c for c in keep if c in df.columns]
+    clean = df[keep].rename(
+        columns={"umdNm": "동", "aptNm": "아파트명", "dealingGbn": "거래유형"}
+    )
+    clean = clean.sort_values("거래일자").reset_index(drop=True)
+    clean.to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
+
+    print(f"\n정제 완료: {n0:,}건 -> {len(clean):,}건 -> {OUTPUT_CSV}")
+    print("\n[구별 평균 평당가(만원)]")
+    print(clean.groupby("구")["평당가_만원"].mean().round(1)
+          .sort_values(ascending=False))
+
+    # 7) PostgreSQL 적재
+    load_to_postgres(clean, raw_df)
+
+
+if __name__ == "__main__":
+    main()

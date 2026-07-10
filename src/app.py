@@ -176,13 +176,13 @@ with tab0:
         fig = px.line(mt, x="거래연월", y="거래금액_억", markers=True,
                       color_discrete_sequence=[GREEN])
         fig.update_layout(height=300, yaxis_title="평균 거래가 (억)", xaxis_title="")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     with cc2:
         st.markdown("**최근 거래 내역**")
         recent = (sub.sort_values("거래일자", ascending=False)
                   .head(8)[["거래일자", "아파트명", "거래금액_억", "전용면적"]])
         recent["거래일자"] = recent["거래일자"].dt.strftime("%y.%m.%d")
-        st.dataframe(recent, use_container_width=True, hide_index=True)
+        st.dataframe(recent, width='stretch', hide_index=True)
 
 # ===== 탭1: 지도 =====
 with tab1:
@@ -230,7 +230,7 @@ with tab2:
     fig = px.bar(area_bar, x="면적대", y="거래금액_억", text_auto=True,
                  color_discrete_sequence=[GREEN])
     fig.update_layout(yaxis_title="평균 거래가 (억)", xaxis_title="", height=360)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
     col1, col2 = st.columns(2)
     with col1:
@@ -243,14 +243,14 @@ with tab2:
         fig = px.bar(age, x="연식대", y="평당가_만원", color_discrete_sequence=[BLUE],
                      text_auto=True)
         fig.update_layout(yaxis_title="평당가 (만원/평)", xaxis_title="", height=330)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     with col2:
         st.markdown("**③ 구별 평당가 분포**")
         st.caption("상자 길이 = 구 내 가격 편차")
         fig = px.box(f, x="구", y="평당가_만원", color="구", color_discrete_map=GU_COLORS)
         fig.update_layout(showlegend=False, yaxis_title="평당가 (만원/평)",
                           xaxis_title="", height=330)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
 # ===== 탭3: 시세 추세 =====
 with tab3:
@@ -262,7 +262,7 @@ with tab3:
                   color_discrete_map=GU_COLORS, markers=True)
     fig.update_layout(height=400, yaxis_title="평당가 (만원/평)", xaxis_title="",
                       legend_title_text="구")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
     monthly = f.groupby("거래연월")["평당가_만원"].mean()
     if len(monthly) >= 2 and monthly.iloc[0] > 0:
@@ -276,7 +276,7 @@ with tab3:
     vol = f.groupby("거래연월").size().reset_index(name="거래량")
     fig2 = px.bar(vol, x="거래연월", y="거래량", color_discrete_sequence=["#9CA3AF"])
     fig2.update_layout(height=260, yaxis_title="거래 건수", xaxis_title="")
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 # ===== 탭4: 거래 조회 =====
 with tab4:
@@ -293,7 +293,7 @@ with tab4:
     view = show[cols].sort_values("거래일자", ascending=False)
 
     st.caption(f"검색 결과: {len(view):,}건")
-    st.dataframe(view, use_container_width=True, hide_index=True)
+    st.dataframe(view, width='stretch', hide_index=True)
 
     csv = view.to_csv(index=False).encode("utf-8-sig")
     st.download_button("📥 조회 결과 CSV 다운로드", csv,
